@@ -3,7 +3,7 @@
 set -e
 
 mkdir -p "$1/bin/"
-# TODO: multiple binaries for specific $STACK
 cp "bin/pdftotext-${STACK}" "$1/bin/pdftotext"
-echo "-----> pdftotext-buildpack: Installed to app/bin"
+cp "bin/pdftoppm-${STACK}" "$1/bin/pdftoppm"
+echo "-----> pdftotext-buildpack: Installed pdftotext and pdftoppm to app/bin"
 exit 0
